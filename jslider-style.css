@@ -1,0 +1,192 @@
+#slides {
+	display: none;
+	position: relative;
+	margin-bottom: 40px;
+}
+.slide {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	height: 100%;
+	overflow: hidden;
+	color: #333;
+	background-color: #ebebeb;
+}
+.slideImg {
+/*	overflow: hidden;
+	float: left;
+	display: inline-block;*/
+/*	height: 100%;
+*//*	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;*/
+}
+#slides .slide .slideImg {
+	height:100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	background-size: cover;
+	margin-top:0;
+}
+.slideImg img {
+	min-height: 100%;
+	min-width: 100%;
+	/* IE 8 */
+   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   /* IE 5-7 */
+   filter: alpha(opacity=0);
+   /* modern browsers */
+   opacity: 0;
+}
+/*.slide img {
+	min-height: 100%;
+	width: 100%;
+	max-width: none;
+}*/
+.slideInfoContainer{
+	background-color: #ebebeb;
+	background-image: url('http://fvbuild.360zen.com/wp-content/uploads/2014/10/tu-puedes.png');
+	background-position: center 35%;
+	background-repeat: no-repeat;
+	background-size: 80%;
+/*	float: left;
+
+	width: 70%;*/
+	height: 100%;
+	position: relative;
+}
+.slideContent {
+/*	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;*/
+	position: absolute;
+	bottom: 0;
+	padding: 5px 20px;
+/*	width: auto;
+	float: left;
+	background-color: rgba(0,0,0,0.4);
+	position: absolute;
+	bottom: 0;*/
+}
+#slides .slideContent h2 {
+	font-size: 1.6em;
+}
+#slides .slideContent h2, #slides .slideContent h2 a, #slides .slideContent h2 a:visited {
+	text-decoration: none;
+	color: #333;
+}
+#slides .slideContent h3 {
+	font-size: 1.3em;
+}
+#slides .slideContent p, #slides .slideContent h3 {
+	margin-left: 20px;
+}
+/**NAVIGATION**/
+.slidesjs-navigation {
+	position: absolute;
+	z-index: 999;
+	top:40%;
+	opacity: 0.5;
+	width: 100px;
+	vertical-align: middle;
+	transition: opacity .4s ease-in-out;
+   -moz-transition: opacity .4s ease-in-out;
+   -webkit-transition: opacity .4s ease-in-out;
+}
+.slidesjs-previous img {
+	float: left;
+	margin-left: 20px;
+}
+.slidesjs-next img{
+	float: right;
+	margin-right: 20px;
+}
+.slidesjs-previous img, .slidesjs-next img{
+	height: 100%;
+	width: auto;
+	visibility: hidden;
+}
+.slidesjs-previous:hover img, .slidesjs-next:hover img {
+	visibility: visible;
+}
+.slidesjs-previous:hover,.slidesjs-next:hover, .slidesjs-navigation:hover, .slidesjs-navigation:hover + .slidesjs-navigation  {
+	opacity: 1;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
+}
+.slidesjs-previous {
+	left: 0;
+/*	background-image: url('./images/prev-arrow.png');
+*/}
+.slidesjs-next {
+	right: 20px;
+/*	background-image: url('./images/next-arrow.png');
+*/}
+/**PAGINATION**/
+.slidesjs-pagination {
+	margin-top: 20px;
+	margin-left: 0;
+	list-style: none;
+	text-align: center;
+}
+.slidesjs-pagination-item {
+	display:inline;	
+	height: 15px;
+	width: 15px;
+	margin: 5px;
+}
+.slidesjs-pagination-item a, .slidesjs-pagination-item a:hover, .slidesjs-pagination-item a:visited {
+	color: transparent;
+/*	width: 100%;
+	height: 100%;*/
+	font-size: 3px;
+	padding: 6px;
+	background-color: #ebebeb;
+}
+.slidesjs-pagination-item a.active {
+	background-color: #529ab5;
+}
+@media screen and (max-width: 767px) { /*THIS IS THE GRID'S BREAKING POINT*/
+	.slideContent {
+		color: #ebebeb;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background-color: rgba(0,0,0,0.4);
+	}
+	#slides .slideContent h2, #slides .slideContent h2 a, #slides .slideContent h2 a:visited{
+		color: #ebebeb;
+	}
+}
+/**
+*BELOW 40 EM
+**/
+@media screen and (max-width: 40em) {
+	.slidesjs-container {
+		min-height: 250px;
+	}
+	.slide {
+		min-height: 224px;
+	}
+	.slideImg {
+		width: 100%;
+	}
+	.slideImg img {
+
+	}
+	.slide-content {
+		background-color: rgba(0,0,0,0.4);
+		width: 100%;
+	}
+	.slideInfoContainer{
+		color: #ebebeb;
+		position: absolute;
+		bottom: 0;
+		width: 100% !important;
+		background: transparent;
+	}
+	#slides .slideContent h2, #slides .slideContent h2 a, #slides .slideContent h2 a:visited{
+		color: #ebebeb;
+	}
+}
