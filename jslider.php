@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: J Slider
+ * Plugin Name: Zen Slider
  * Plugin URI: http://360zen.com
  * Description: A Slider for Custom Post Types. Uses SlidesJS.
  * Version: 0.5
@@ -33,11 +33,11 @@ add_action( 'wp_enqueue_scripts', 'load_fire_js' );
 /**
 *LOAD STYLES
 **/
-function load_jslider_style() {
-	wp_register_style( 'jslider-style', plugins_url( 'jslider-style.css', __FILE__ ));
-	wp_enqueue_style('jslider-style');
+function load_zenslider_style() {
+	wp_register_style( 'zenslider-style', plugins_url( 'zenslider-style.css', __FILE__ ));
+	wp_enqueue_style('zenslider-style');
 }
-add_action( 'wp_enqueue_scripts', 'load_jslider_style' );
+add_action( 'wp_enqueue_scripts', 'load_zenslider_style' );
 
 
 /**
@@ -78,7 +78,7 @@ function go_slider_go() {
 /**
 *ADD ADMIN PAGE
 **/
-add_action('admin_menu', 'jslider_admin_add_page');
-function jslider_admin_add_page() {
-add_options_page('JSlider Settings', 'JSlider Menu', 'manage_options', 'jslider', 'jslider_options_page');
+add_action('admin_menu', 'zenslider_admin_add_page');
+function zenslider_admin_add_page() {
+add_options_page('Zen Slider Settings', 'Zen Slider Menu', 'manage_options', 'zenslider', 'zenslider_options_page');
 }
